@@ -1,5 +1,6 @@
 package com.test.sentrifugo.test;
 
+import Utils.DriverHelper;
 import com.test.sentrifugo.pages.BackgroundCheckPage;
 import com.test.sentrifugo.pages.LoginPage;
 import com.test.sentrifugo.pages.MainPage;
@@ -16,17 +17,20 @@ public class BackgroundTest {
 
     WebDriver driver;
 
-    @BeforeMethod
+    /*@BeforeMethod
     public void setup(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.get("http://demo.sentrifugo.com/index.php/");
-    }
+    }*/
 
     @Test
     public void validateBackgroundCheck(){
+        driver = DriverHelper.getDriver();
+        driver.get("http://demo.sentrifugo.com/index.php/");
+
         LoginPage loginPage=new LoginPage(driver);
         loginPage.login("EM01", "sentrifugo");
 
@@ -48,6 +52,6 @@ public class BackgroundTest {
 
     @AfterMethod
     public void tearDown(){
-        driver.quit();
+        //driver.quit();
     }
 }

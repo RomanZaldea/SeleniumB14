@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="OpenChart Test Suite">
+    <test name="OpenChart Test">
+        <parameter name="totalOrders" value="102"> </parameter>
+        <parameter name="totalSales" value="83.6K"> </parameter>
+        <parameter name="totalCustomers" value="8K"> </parameter>
+        <parameter name="peopleOnline" value="78"> </parameter>
+        <classes>
+            <class name="com.test.openchart.tests.OpenChartMainTest"> </class>
+
+        </classes>
+    </test>
+</suite>

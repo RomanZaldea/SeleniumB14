@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke Suite">
+    <test name="Sentrifugo Test">
+        <classes>
+            <class name="com.test.sentrifugo.test.LoginTest"> </class>
+            <class name="com.test.sentrifugo.test.DepartmentTest"> </class>
+            <class name="com.test.sentrifugo.test.BackgroundTest"> </class>
+        </classes>
+    </test>
+</suite>
